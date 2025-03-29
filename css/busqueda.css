@@ -1,0 +1,9 @@
+.celda_resultado
+{
+  font-size: 125%;
+}
+
+.celda_resultado:hover
+{
+  cursor:pointer;
+}
