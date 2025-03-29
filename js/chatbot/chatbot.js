@@ -45,7 +45,7 @@ function hideTypingIndicator() {
   }
 }
 
-// Función para consultar a la API de Groq con Llama 3
+// consultar a la API de Groq con Llama 3
 async function queryLlama3(prompt) {
   try {
     showTypingIndicator();
@@ -74,7 +74,8 @@ async function queryLlama3(prompt) {
 					  - Destaca los valores de AXA: el cliente es lo primero, integridad, valentia y unidad\
 					  \
 					  Formato preferido:\
-					  [Respuesta estructurada en guione o puntos si es complejo]\
+					  [Respuesta estructurada usa puntos si es complejo]\
+					  [Máximo 4 párrafos]\
 					  [Recomendación de acción si aplica]"
           },
           {
