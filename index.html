@@ -3,11 +3,16 @@
   <head>
     <title></title>
     <meta charset = "UTF-8">
+    <link href="css/buscador.css" rel="stylesheet" type="text/css">
     <script src = "js/mapa.js" defer></script>
   </head>
 
   <body>
-    <input id = "barra" type = "search" onchange = "obtenerResultados()">
-    <div id = "resultados_ busqueda"></div>
+    <div id = "resultados_ busqueda">
+      <input id = "barra" type = "search" onchange = "obtenerResultados()">
+    </div>
+    <div id = "mapa">
+      <img src="images/mapa.png">
+    </div>
   </body>
 </html>
