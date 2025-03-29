@@ -12,13 +12,13 @@
 
   $search = $_POST["search"];
 
-  $query = "SELECT NOMBRE FROM municipio WHERE NOMBRE LIKE '%" + $search + "%' LIMIT 5;";
+  $query = "SELECT NOMBRE FROM municipio WHERE NOMBRE LIKE '%" . $search . "%' LIMIT 5;";
   
   $result = $conn->query($query);
 
   $query_result = [];
 
-  $filas = $result->numrows;
+  $filas = $result->num_rows;
 
   if($filas > 0)
   {

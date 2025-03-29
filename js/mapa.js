@@ -2,10 +2,10 @@ const key = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWZhYmFyYWZhQGdtYWlsLmNvbSIsImp0aS
 
 async function obtenerResultados()
 {
-  const data = new FormData()
+  data = new FormData()
   data.append("search", document.getElementById("barra").value);
 
-  const result = await fetch("../php/consultaMunicipios.php", 
+  const result = await fetch("php/consultaMunicipios.php", 
   {
     method: "POST",
     body: data,
@@ -17,7 +17,7 @@ async function obtenerResultados()
 
   for(i = 0; i < data.num_registros; i++)
   {
-    document.getElementById("resultados_busqueda").innerHTML += "<p>" + data.result[i] + "</p>";
+    document.getElementById("resultados_busqueda").innerHTML += "<p class = 'celda_resultado'>" + data.result[i]["NOMBRE"] + "</p>";
   }
 
   
