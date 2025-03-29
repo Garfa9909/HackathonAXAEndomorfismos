@@ -1,21 +1,17 @@
 DROP DATABASE IF EXISTS municipiosDB;
 CREATE DATABASE municipiosDB;
-
-DROP TABLE IF EXISTS municipio;
+USE municipiosDB;
 
 CREATE TABLE municipio(
-ID_municipio INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-NOMBRE varchar(150) UNIQUE KEY,
 CODAUTO INT,
-CMUN INT,
 CPRO INT,
+CMUN INT,
 DC INT,
-
+NOMBRE varchar(150)
 );
 
-LOAD DATA INFILE 'var/lib/mysql-files/diccionario24.xlsx'
+LOAD DATA INFILE '/var/lib/mysql-files/diccionario24.csv'
 INTO TABLE municipio
-FIELDS TERMINATED BY ','
-ENCLOSED BY '""'
-
-
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';

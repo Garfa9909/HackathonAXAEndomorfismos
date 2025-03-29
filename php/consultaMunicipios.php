@@ -8,7 +8,7 @@
 
   $search = $_POST["search"];
 
-  $query = "SELECT NOMBRE FROM municipios WHERE NOMBRE LIKE '%" + $search + "%' LIMIT 5;";
+  $query = "SELECT NOMBRE FROM municipio WHERE NOMBRE LIKE '%" + $search + "%' LIMIT 5;";
   
   $result = $conn->query($query);
 
