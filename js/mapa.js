@@ -17,7 +17,7 @@ async function obtenerResultados()
 
   for(i = 0; i < data.num_registros; i++)
   {
-    document.getElementById("resultados_busqueda").innerHTML += "<p>" + data.result[i]["NOMBRE"] + "</p>";
+    document.getElementById("resultados_busqueda").innerHTML += "<p class = 'celda_resultado'>" + data.result[i]["NOMBRE"] + "</p>";
   }
 
   
