@@ -1,6 +1,11 @@
 const key = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWZhYmFyYWZhQGdtYWlsLmNvbSIsImp0aSI6ImIwMWEzMDk1LTBmZmQtNDk3NC1hNDk1LTgyNmQ4N2Y1NTRmMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzQzMjQyMzc3LCJ1c2VySWQiOiJiMDFhMzA5NS0wZmZkLTQ5NzQtYTQ5NS04MjZkODdmNTU0ZjMiLCJyb2xlIjoiIn0.5nNTwVQaDRyTJTJg-n1Giuvmw8rUQF38Qb_KmPwJkzs";
 document.getElementById("barra").addEventListener("input", obtenerResultados);
 
+document.getElementById("barra").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {  
+      buscar();  
+  }})
+
 async function obtenerResultados()
 {
   if(document.getElementById("barra").value != "")
@@ -33,5 +38,10 @@ async function obtenerResultados()
 
 function buscar()
 {
-  
+  search = document.getElementById("barra").value;
+  if(search != "")
+  {
+    sessionStorage.setItem("search", search);
+    location.replace("html/busqueda.html");
+  }
 }
