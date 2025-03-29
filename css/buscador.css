@@ -9,15 +9,15 @@ body{
     font-size: 3em;
 }
 
-#barra{
+#barra
+{
     font-size: 2em;
     text-align: center;
     width: 35vw;
     margin-top: 15vh;
     margin-left: 32vw;
-    margin-bottom: 15vh;
     border-radius: 4vh;
-    }
+}
 #barra:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -27,6 +27,28 @@ body{
     height: auto;
 }
 
-.celda_resultado{
+.celda_resultado
+{
+    text-align: center;
+    height:5vh;
+    font-size: 150%;
+    margin-top:0;
+    margin-bottom: 0;
+    width:40vw;
+    border-radius: 10px;
+}
+
+.celda_resultado:hover
+{
+    background-color: rgb(218, 218, 218);
+}
+
+#resultados_busqueda
+{
+    height:25vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    
     
 }
