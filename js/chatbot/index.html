@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Aseguradora con Llama 3</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="chat-container">
+    <div id="chat-header">
+      <h2>Asistente Virtual AXA</h2>
+      <p>Powered by Llama 3</p>
+    </div>
+    <div id="chat-messages">
+      <div class="message bot-message">
+        ¡Hola! Soy tu asistente virtual de seguros. ¿En qué puedo ayudarte hoy? Puedes preguntarme sobre:
+        <ul>
+          <li>Coberturas de seguros</li>
+          <li>Proceso de siniestros</li>
+          <li>Renovación de pólizas</li>
+          <li>Comparación de planes</li>
+        </ul>
+      </div>
+    </div>
+    <div id="input-area">
+      <input type="text" id="user-input" placeholder="Escribe tu pregunta sobre seguros..." autocomplete="off">
+      <button id="send-button">Enviar</button>
+    </div>
+  </div>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
