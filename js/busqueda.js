@@ -4,11 +4,11 @@ async function mostrarResultados()
   data = new FormData()
   data.append("search", search);
 
-  const result = await fetch("php/busquedaMunicipios.php", 
-  {
-    method: "POST",
-    body: data,
-  });
+  const result = await fetch("../php/busquedaMunicipios.php", 
+    {
+      method: "POST",
+      body: data,
+    });
 
   data = await result.json();
 
@@ -22,6 +22,6 @@ async function mostrarResultados()
 
   else
   {
-    document.getElementById("resultados").innerHTML = "No hay resultados para ";
+    document.getElementById("resultados").innerHTML = "No hay resultados para " + search;
   }
 }

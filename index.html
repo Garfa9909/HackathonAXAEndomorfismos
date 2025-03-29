@@ -3,7 +3,9 @@
   <head>
     <meta charset = "UTF-8">
     <link href="css/buscador.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/chatbot.css">
     <script src = "js/mapa.js" defer></script>
+    <script src = "js/chatbot.js" defer></script>
   </head>
 
   <body>
@@ -14,6 +16,30 @@
     </div>
     <div id = "mapa">
       <img src="images/mapa.png">
+    </div>
+
+
+    <button id = "chat_boton"> <img id = "img_boton" src="../images/chat.jpg"></button>
+
+    <div id="chat-container">
+      <div id="chat-header">
+        <h2>Asistente Virtual AXA</h2>
+      </div>
+      <div id="chat-messages">
+        <div class="message bot-message">
+          ¡Hola! Soy tu asistente virtual de seguros. ¿En qué puedo ayudarte hoy? Puedes preguntarme sobre:
+          <ul>
+            <li>Coberturas de seguros</li>
+            <li>Proceso de siniestros</li>
+            <li>Renovación de pólizas</li>
+            <li>Comparación de planes</li>
+          </ul>
+        </div>
+      </div>
+      <div id="input-area">
+        <input type="text" id="user-input" placeholder="Escribe tu pregunta sobre seguros..." autocomplete="off">
+        <button id="send-button">Enviar</button>
+      </div>
     </div>
   </body>
 </html>

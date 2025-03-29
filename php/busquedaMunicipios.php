@@ -12,7 +12,7 @@
 
   $search = $_POST["search"];
 
-  $query = "SELECT NOMBRE FROM municipio WHERE NOMBRE LIKE '%" . $search . "%';";
+  $query = "SELECT NOMBRE FROM municipio WHERE NOMBRE LIKE '%" . $search . "%' LIMIT 100;";
   
   $result = $conn->query($query);
 
