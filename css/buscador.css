@@ -4,19 +4,20 @@ body{
 }
 
 #header{
+    margin-top: 7vh;
     text-align: center;
+    font-size: 3em;
 }
 
 #barra{
     font-size: 2em;
     text-align: center;
     width: 35vw;
-    margin-top: 20vh;
+    margin-top: 15vh;
     margin-left: 32vw;
     margin-bottom: 15vh;
     border-radius: 4vh;
-    background: url('images/lupa.png');   
-}
+    }
 #barra:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -26,3 +27,6 @@ body{
     height: auto;
 }
 
+.celda_resultado{
+    
+}
