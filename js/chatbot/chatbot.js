@@ -99,12 +99,11 @@ async function handleSendMessage() {
   addMessage(message, true);
   userInput.value = '';
   
-  // Obtener y mostrar respuesta del bot
+  //respuesta del bot
   const botResponse = await queryLlama3(message);
   addMessage(botResponse);
 }
 
-// Event listeners
 sendButton.addEventListener('click', handleSendMessage);
 userInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
