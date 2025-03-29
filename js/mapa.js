@@ -5,7 +5,7 @@ async function obtenerResultados()
   const data = new FormData()
   data.append("search", document.getElementById("barra").value);
 
-  const result = await fetch("buscar.php", 
+  const result = await fetch("../php/consultaMunicipios.php", 
   {
     method: "POST",
     body: data,
