@@ -1,24 +1,34 @@
 const key = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWZhYmFyYWZhQGdtYWlsLmNvbSIsImp0aSI6ImIwMWEzMDk1LTBmZmQtNDk3NC1hNDk1LTgyNmQ4N2Y1NTRmMyIsImlzcyI6IkFFTUVUIiwiaWF0IjoxNzQzMjQyMzc3LCJ1c2VySWQiOiJiMDFhMzA5NS0wZmZkLTQ5NzQtYTQ5NS04MjZkODdmNTU0ZjMiLCJyb2xlIjoiIn0.5nNTwVQaDRyTJTJg-n1Giuvmw8rUQF38Qb_KmPwJkzs";
+document.getElementById("barra").addEventListener("input", obtenerResultados);
 
 async function obtenerResultados()
 {
-  data = new FormData()
-  data.append("search", document.getElementById("barra").value);
-
-  const result = await fetch("php/consultaMunicipios.php", 
+  if(document.getElementById("barra").value != "")
   {
-    method: "POST",
-    body: data,
-  });
+    data = new FormData()
+    data.append("search", document.getElementById("barra").value);
 
-  data = await result.json();
+    const result = await fetch("php/consultaMunicipios.php", 
+    {
+      method: "POST",
+      body: data,
+    });
 
-  document.getElementById("resultados_busqueda").innerHTML = "";
+    data = await result.json();
 
-  for(i = 0; i < data.num_registros; i++)
-  {
-    document.getElementById("resultados_busqueda").innerHTML += "<p class = 'celda_resultado'>" + data.result[i]["NOMBRE"] + "</p>";
+    document.getElementById("resultados_busqueda").innerHTML = "";
+
+    for(i = 0; i < data.num_registros; i++)
+    {
+      document.getElementById("resultados_busqueda").innerHTML += "<p class = 'celda_resultado'>" + data.result[i]["NOMBRE"] + "</p>";
+    }
   }
+
+  else
+  {
+    document.getElementById("resultados_busqueda").innerHTML = "";
+  }
+  
 
   
 
