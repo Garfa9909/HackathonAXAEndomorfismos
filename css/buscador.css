@@ -4,24 +4,25 @@ body{
 }
 
 #header{
-	font-size: 3.2em;
     text-align: center;
-    width: 60vw;
-    margin-left: 20vw;
-    margin-bottom: 15vh;
-    margin-top: 7vh;
 }
 
 #barra{
     font-size: 2em;
     text-align: center;
     width: 35vw;
+    margin-top: 20vh;
     margin-left: 32vw;
     margin-bottom: 15vh;
     border-radius: 4vh;
+    background: url('images/lupa.png');   
+}
+#barra:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #mapa img {
     max-width: 100%;
     height: auto;
 }
+
