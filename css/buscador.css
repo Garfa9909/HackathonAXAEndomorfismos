@@ -41,7 +41,6 @@ body{
 .celda_resultado:hover
 {
     background-color: rgb(218, 218, 218);
-    cursor:pointer;
 }
 
 #resultados_busqueda

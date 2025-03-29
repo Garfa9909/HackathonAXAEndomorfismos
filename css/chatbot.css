@@ -6,21 +6,17 @@ body {
 {
   position: fixed;
   height: 10vh;
-  top:86.5vh;
+  top:85vh;
   left:90vw;
   padding:0;
   border-radius: 2vh;
   border-width: 0;
-  z-index: 2;
 }
 
 #chat_boton:hover
 {
-  top:85.5vh;
-  left:89.5vw;
   height: 12vh;
   width:12vh;
-  cursor:pointer;
 }
 
 #img_boton:hover
@@ -36,13 +32,7 @@ body {
 }
 
 #chat-container {
-  display:none;
-  z-index:1;
-  width:30vw;
-  height:90vh;
-  position:fixed;
-  top:8vh;
-  left:67vw;
+  max-width: 800px;
   margin: 0 auto;
   background: white;
   border-radius: 10px;

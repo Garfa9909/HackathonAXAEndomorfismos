@@ -25,7 +25,7 @@ async function obtenerResultados()
 
     for(i = 0; i < data.num_registros; i++)
     {
-      document.getElementById("resultados_busqueda").innerHTML += "<p class = 'celda_resultado' onclick = 'infoMunicipio(" + data.result[i]["codigo_completo"] +`, "`+data.result[i]["NOMBRE"] + `")'>` + data.result[i]["NOMBRE"] + "</p>";
+      document.getElementById("resultados_busqueda").innerHTML += "<p class = 'celda_resultado'>" + data.result[i]["NOMBRE"] + "</p>";
     }
   }
 
@@ -44,11 +44,4 @@ function buscar()
     sessionStorage.setItem("search", search);
     location.replace("html/busqueda.html");
   }
-}
-
-function infoMunicipio(id, nombre)
-{
-  sessionStorage.setItem("id", id);
-  sessionStorage.setItem("municipio", nombre);
-  location.replace("html/infoMunicipio.html");
 }

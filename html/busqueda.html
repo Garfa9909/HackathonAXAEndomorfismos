@@ -3,37 +3,11 @@
   <head>
     <meta charset = "UTF-8">
     <script src = "../js/busqueda.js" defer></script>
-    <script src = "../js/chatbot.js" defer></script>
-    <link rel="stylesheet" href="../css/chatbot.css">
-    <link rel="stylesheet" href="../css/busqueda.css">
   </head>
 
   <body onload = "mostrarResultados()">
     <h1> Resultados de la búsqueda: </h1>
     <div id = "resultados"></div>
-
-    <button id = "chat_boton" onclick = "botonChatbot()"> <img id = "img_boton" src="../../images/chat.jpg"></button>
-
-    <div id="chat-container">
-      <div id="chat-header">
-        <h2>Asistente Virtual AXA</h2>
-      </div>
-      <div id="chat-messages">
-        <div class="message bot-message">
-          ¡Hola! Soy tu asistente virtual de seguros. ¿En qué puedo ayudarte hoy? Puedes preguntarme sobre:
-          <ul>
-            <li>Coberturas de seguros</li>
-            <li>Proceso de siniestros</li>
-            <li>Renovación de pólizas</li>
-            <li>Comparación de planes</li>
-          </ul>
-        </div>
-      </div>
-      <div id="input-area">
-        <input type="text" id="user-input" placeholder="Escribe tu pregunta sobre seguros..." autocomplete="off">
-        <button id="send-button">Enviar</button>
-      </div>
-    </div>
 
   </body>
 

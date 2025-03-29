@@ -1,6 +1,5 @@
 const API_KEY = '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';
 const MODEL = 'llama3-8b-8192';
-chatbot = false;
 
 const chatMessages = document.getElementById('chat-messages');
 const userInput = document.getElementById('user-input');
@@ -124,28 +123,3 @@ userInput.addEventListener('keypress', (e) => {
     handleSendMessage();
   }
 });
-
-function botonChatbot()
-{
-  if(!chatbot)
-  {
-    mostrarChatbot();
-  }
-
-  else
-  {
-    ocultarChatbot();
-  }
-}
-
-function mostrarChatbot()
-{
-  document.getElementById("chat-container").style.display = "block";
-  chatbot = true;
-}
-
-function ocultarChatbot()
-{
-  document.getElementById("chat-container").style.display = "none";
-  chatbot = false;
-}

@@ -16,7 +16,7 @@ async function mostrarResultados()
   {
     for(i = 0; i < data.num_registros; i++)
     {
-      document.getElementById("resultados").innerHTML += "<p class = 'celda_resultado' onclick = 'infoMunicipio(" + data.result[i]["codigo_completo"] +`, "`+data.result[i]["NOMBRE"] + `")'>` + data.result[i]["NOMBRE"] + "</p>";
+      document.getElementById("resultados").innerHTML += "<p class = 'celda_resultado'>" + data.result[i]["NOMBRE"] + "</p>";
     }
   }
 
@@ -24,13 +24,4 @@ async function mostrarResultados()
   {
     document.getElementById("resultados").innerHTML = "No hay resultados para " + search;
   }
-
-  
-}
-
-function infoMunicipio(id, nombre)
-{
-  sessionStorage.setItem("id", id);
-  sessionStorage.setItem("municipio", nombre);
-  location.replace("../html/infoMunicipio.html");
 }
