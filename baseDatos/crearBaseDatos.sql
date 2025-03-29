@@ -22,3 +22,10 @@ UPDATE municipio
 SET NOMBRE = CONCAT(SUBSTRING_INDEX(NOMBRE, ', ', -1), ' ', SUBSTRING_INDEX(NOMBRE, ', ', 1))
 WHERE NOMBRE LIKE '%, %';
 
+CREATE VIEW vista_municipios AS
+SELECT
+    NOMBRE,
+    CPRO,
+    CMUN,
+    CONCAT(CPRO, LPAD(CMUN, 3, '0')) AS codigo_completo
+FROM municipio;
