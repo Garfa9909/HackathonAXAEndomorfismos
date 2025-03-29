@@ -29,7 +29,9 @@ async function obtenerResultados()
     document.getElementById("resultados_busqueda").innerHTML = "";
   }
   
+}
 
+function buscar()
+{
   
-
 }
