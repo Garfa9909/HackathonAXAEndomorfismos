@@ -1,18 +1,17 @@
 const API_KEY = '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';
 const MODEL = 'llama3-8b-8192';
 
-// Elementos del DOM
 const chatMessages = document.getElementById('chat-messages');
 const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-button');
 
-// Función para añadir mensajes al chat
+// añadir mensajes al chat
 function addMessage(content, isUser = false) {
   const messageDiv = document.createElement('div');
   messageDiv.classList.add('message');
   messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
   
-  // Convertir saltos de línea en <br> para mantener el formato
+  // saltos linea mantener el formato
   const formattedContent = content.replace(/\n/g, '<br>');
   messageDiv.innerHTML = formattedContent;
   
@@ -20,7 +19,7 @@ function addMessage(content, isUser = false) {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Función para mostrar "escribiendo..."
+// mostrar "escribiendo..."
 function showTypingIndicator() {
   const typingDiv = document.createElement('div');
   typingDiv.classList.add('message', 'bot-message');
@@ -39,7 +38,6 @@ function showTypingIndicator() {
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// Función para ocultar "escribiendo..."
 function hideTypingIndicator() {
   const typingDiv = document.getElementById('typing-indicator');
   if (typingDiv) {
@@ -90,12 +88,12 @@ async function queryLlama3(prompt) {
   }
 }
 
-// Manejar el envío de mensajes
+// envio mensajes
 async function handleSendMessage() {
   const message = userInput.value.trim();
   if (!message) return;
   
-  // Añadir mensaje del usuario
+  // mensaje usuario
   addMessage(message, true);
   userInput.value = '';
   
