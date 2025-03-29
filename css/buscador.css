@@ -1,3 +1,27 @@
-#mapa {
-    
+body{
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#header{
+	font-size: 3.2em;
+    text-align: center;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-bottom: 15vh;
+    margin-top: 7vh;
+}
+
+#barra{
+    font-size: 2em;
+    text-align: center;
+    width: 35vw;
+    margin-left: 32vw;
+    margin-bottom: 15vh;
+    border-radius: 4vh;
+}
+
+#mapa img {
+    max-width: 100%;
+    height: auto;
 }
