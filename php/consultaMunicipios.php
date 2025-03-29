@@ -1,4 +1,8 @@
 <?php
+
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+
   $servername = "localhost";
   $username = "admin";
   $password = "admin123";
@@ -14,7 +18,9 @@
 
   $query_result = [];
 
-  if($result->numrows > 0)
+  $filas = $result->numrows;
+
+  if($filas > 0)
   {
     while($row = $result->fetch_assoc())
     {
@@ -22,13 +28,12 @@
     }
   }
 
-  $response = 
-  [
-    "num_registros" => $result->numrows
+  $response = [
+    "num_registros" => $filas,
     "result" => $query_result
   ];
 
-  echo json_encode($query_result);
+  echo json_encode($response);
 
   
 
